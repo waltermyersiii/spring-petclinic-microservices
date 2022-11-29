@@ -11,7 +11,8 @@
             "ppa": "false"
         },
         "ghcr.io/devcontainers/features/azure-cli:1": {},
-        "ghcr.io/devcontainers/features/terraform:1": {}
+        "ghcr.io/devcontainers/features/terraform:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {}
     },
     "containerEnv": {
         "JAVA_HOME": "/usr/lib/jvm/msopenjdk-current"
