@@ -1,5 +1,16 @@
 spring:
   application:
     name: messaging-emulator
-  # config:
-  #   import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:8888/}
+  jms:
+    servicebus:
+      connection-string: Endpoint=sb://sb-fmiguel-springapp-wejejoji.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=1m7Gq58jngimzjxkcRMtijbrqw+K+kFaXDw9E+oWLeI=
+      idle-timeout: 60000
+      pricing-tier: premium
+  sql:
+    init:
+      mode: always
+      platform: hsqldb
+server:
+  port: 8080

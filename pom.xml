@@ -23,7 +23,7 @@
         <module>spring-petclinic-config-server</module>
         <module>spring-petclinic-discovery-server</module>
         <module>spring-petclinic-api-gateway</module>
-        <!-- <module>spring-petclinic-messaging-emulator</module> -->
+        <module>spring-petclinic-messaging-emulator</module>
     </modules>
 
     <properties>
@@ -32,6 +32,7 @@
 
         <spring-boot.version>2.7.6</spring-boot.version>
         <spring-cloud.version>2021.0.4</spring-cloud.version>
+        <version.spring.cloud.azure>4.4.1</version.spring.cloud.azure>
         <chaos-monkey-spring-boot.version>2.3.10</chaos-monkey-spring-boot.version>
 
         <docker.image.prefix>springcommunity</docker.image.prefix>
@@ -60,6 +61,13 @@
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.azure.spring</groupId>
+                <artifactId>spring-cloud-azure-dependencies</artifactId>
+                <version>${version.spring.cloud.azure}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
